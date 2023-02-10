@@ -1,0 +1,70 @@
+.anki-main h2 {
+    color: white;
+    display: inline
+}
+
+.anki-main input {
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    margin: 4px;
+    width: 90%;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 1.3em;
+}
+
+.anki-main hr {
+    width: 100%;
+    border: 1px solid transparent;
+    margin-top: 0cm;
+    height: 0px;
+
+
+}
+
+.anki-questions {
+    margin-bottom: 0.5cm;
+}
+
+.anki-main {
+    background: linear-gradient(to left top, rgb(0, 0, 40), darkblue 50%, rgb(0, 0, 40) 100%);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.anki-main span {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.anki-main button {
+    margin-left: 0.5cm;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.anki-main button:hover {
+    border: 3px solid gray;
+}
+
+.anki-main select {
+    background: rgba(0,0,0,0.3);
+    margin-left: 0.5cm;
+    color: white;
+    border: 3px solid transparent;
+    padding:5px;
+
+    border-radius: 8px;
+
+}
+.anki-question{
+    border: 2px solid rgba(255,255,255,0.3);
+    padding: 5px;
+    border-radius: 8px;
+    margin: 2px;
+}

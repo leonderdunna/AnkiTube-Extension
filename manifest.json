@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "version":"1.0",
+  "name": "Anki Youtube",
+  "content_scripts": [
+    {
+      "matches":[
+        "https://*/*"
+      ],
+      "js": ["js/main.js"]
+    },
+    {
+      "matches":[
+        "https://www.youtube.com/*"
+      ],
+      "js": ["js/youtube.js"],
+      "css": ["css/yt.css"]
+    }
+  ]
+}
