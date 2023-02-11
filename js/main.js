@@ -1,7 +1,7 @@
 let main_id = null
 let main_data = {}
 let main_textFile
-let main_url = "http://localhost:3000/"
+let main_url = "https://139-162-135-50.ip.linodeusercontent.com:80/"
 
 function getMainPanel(group, id) {
     main_id = id
@@ -14,6 +14,17 @@ function getMainPanel(group, id) {
     titel.textContent = group + ": " + id;
     main.append(titel)
     main.append(getDownloadButton())
+
+    let aktualisierenButton = document.createElement("button")
+    aktualisierenButton.addEventListener("click",()=> {
+        document.querySelector(".anki-main").remove()
+        start().then(()=>{
+            console.log("neugeladen")
+        })
+    })
+
+    aktualisierenButton.textContent = "↓↑"
+    main.append(aktualisierenButton)
     main.classList.add("anki-main", "anki-" + id)
 
 
@@ -114,6 +125,7 @@ function getQuestionDiv(question) {
             upload(question)
         })
         text.value = question.text
+        text.placeholder = "{{c1::Lückentext}}"
         questionDiv.append(text)
         return questionDiv
     }
@@ -126,6 +138,7 @@ function getQuestionDiv(question) {
             upload(question)
         })
         q.value = question.question
+        q.placeholder = "Frage"
         let a = document.createElement("input")
         a.classList.add("anki-a-" + question.id)
         a.addEventListener("change", () => {
@@ -133,6 +146,7 @@ function getQuestionDiv(question) {
             upload(question)
         })
         a.value = question.answer
+        a.placeholder = "Antwort"
         questionDiv.append(q)
         questionDiv.append(a)
         return questionDiv
@@ -201,10 +215,10 @@ function addNewCard(type) {
     card.id = "anki-addon-" + Math.floor((Math.random() * 10000000000000000))
 
     if (type === "Cloze")
-        card.text = "{{c1::Lückentext}} Template";
+        card.text = "";
     else {
-        card.question = "Frage hier einfügen?"
-        card.answer = "Antwort hier einfügen!"
+        card.question = ""
+        card.answer = ""
     }
 
     document.querySelector(".anki-questions").append(getQuestionDiv(card))
