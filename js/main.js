@@ -1,7 +1,7 @@
 let main_id = null
 let main_data = {}
 let main_textFile
-let main_url = "https://139-162-135-50.ip.linodeusercontent.com:80/"
+let main_url = "https://139-162-135-50.ip.linodeusercontent.com:80/card/"
 
 function getMainPanel(group, id) {
     main_id = id

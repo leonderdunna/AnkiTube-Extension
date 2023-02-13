@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
   "version":"1.0",
-  "name": "Anki Youtube",
+  "name": "AnkiTube",
+  "description": "Fügt neben Youtube Videos einen Kasten ein, in dem direkt Anki-Karten erstellt werden können",
   "content_scripts": [
     {
       "matches":[
@@ -15,6 +16,13 @@
       ],
       "js": ["js/youtube.js"],
       "css": ["css/yt.css"]
+    },
+    {
+      "matches":[
+        "https://bootstrap.academy/*"
+      ],
+      "js": ["js/bootstrap.js"],
+      "css": ["css/bootstrap.css"]
     }
   ]
 }
